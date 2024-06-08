@@ -1,0 +1,1 @@
+conda create --name MyPortfolio python=3.12 Flask
