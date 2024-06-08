@@ -1,5 +1,22 @@
 from flask import Flask, redirect, url_for, render_template, request
 
+#JINJA2 template engine
+'''
+{%...%} conditions, for loops ex: {% if result >= 50 %} Do this {% else %} or do that,
+if we need to close we do it mannualy {%  endif %}
+table
+{% for key, value in result.items() %}
+tr 
+    th {{ key }} /th
+    th {{ value }} /th
+/tr
+{% endfor %}
+/table
+
+{{    }} expression to print output
+{#....#} this is for comments
+'''
+
 app=Flask(__name__) 
 
 @app.route('/')
