@@ -20,8 +20,8 @@ tr
 app=Flask(__name__) 
 
 @app.route('/')
-def welcome():
-    return render_template('index.html')
+def home():
+    return render_template('home/index.html')
 
 @app.route('/result/<int:score>')
 def result(score):
