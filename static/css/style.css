@@ -44,7 +44,7 @@ li, a, button {
 
 button {
     padding: 9px 25px;
-    background-color: blueviolet;
+    background-color: aqua;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -52,5 +52,5 @@ button {
 }
 
 button:hover {
-    background-color: rgba(138, 43, 226, 0.8);
+    background-color: rgba(0, 255, 255, 0.8);
 }
