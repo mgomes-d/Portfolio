@@ -20,13 +20,13 @@ Structure:
 Color:
 We need to do the rule of 60 / 30 / 10
 
-Role,Color,Hex,Usage
-Primary,Golden, #ffb405,"Buttons, links, highlights, accents"
-Secondary,Coral/Red, #c2554f,"Secondary buttons, hover states, tags"
-Background,Dark, #1c1917,Main background
-Surface,Slightly lighter dark, #292524,"Cards, navbar, sections"
-Text,Off-white, #fafaf9,Main text
-Muted text,Gray, #a8a29e,"Descriptions, secondary text"
+Role	Name	Hex	Usage
+Primary	Teal	#2dd4bf	Buttons, links, highlights, accents
+Secondary	Sky Blue	#38bdf8	Secondary buttons, hover states, tags
+Background	Cool Dark	#0f172a	Main background
+Surface	Slightly lighter	#1e293b	Cards, navbar, sections
+Text	Off-white	#f1f5f9	Main text
+Muted text	Slate Gray	#94a3b8	Descriptions, secondary text
 
 Change if it's not good, we need to start with something
 
