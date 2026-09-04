@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 import { useState } from "react"
 import { List, X } from "@phosphor-icons/react"
-import { buttonVariants } from "@/components/ui/button"
+import ThemeToggle from "@/components/layout/ThemeToggle"
 import { site } from "@/content/site"
 import { cn } from "@/lib/utils"
 
@@ -25,41 +25,38 @@ export default function Navbar() {
           {site.shortName}<span className="text-primary">.</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) =>
-                cn(
-                  "text-sm transition-colors",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
+        <div className="flex items-center gap-2 md:gap-6">
+          <nav className="hidden items-center gap-8 md:flex">
+            {links.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  cn(
+                    "text-sm transition-colors",
+                    isActive
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
+                  )
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
 
-        <Link
-          to="/contact"
-          className={cn(buttonVariants({ size: "sm" }), "hidden md:inline-flex")}
-        >
-          Contact Me
-        </Link>
+          <ThemeToggle />
 
-        <button
-          type="button"
-          className="inline-flex size-9 items-center justify-center rounded-md text-foreground md:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? <X size={22} /> : <List size={22} />}
-        </button>
+          <button
+            type="button"
+            className="inline-flex size-9 items-center justify-center rounded-md text-foreground md:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X size={22} /> : <List size={22} />}
+          </button>
+        </div>
       </div>
 
       {open ? (
@@ -82,13 +79,6 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
-              className={cn(buttonVariants({ size: "sm" }), "mt-2 w-full")}
-            >
-              Contact Me
-            </Link>
           </nav>
         </div>
       ) : null}

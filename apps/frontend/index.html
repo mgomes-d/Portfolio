@@ -1,13 +1,27 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#0f766e" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark =
+            stored === "dark" ||
+            (stored !== "light" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) {}
+      })();
+    </script>
     <title>Murillo Gomes de Senna — Backend Developer</title>
     <meta
       name="description"
-      content="Backend developer in Belgium. Python, FastAPI, AWS. Open to opportunities."
+      content="Murillo Gomes de Senna, backend developer in Brussels. Software and systems work across HTTP servers, Unix, networking, security, and AWS. AWS Solutions Architect – Associate."
     />
   </head>
   <body>

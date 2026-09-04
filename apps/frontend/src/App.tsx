@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout"
 import ScrollToTop from "@/components/layout/ScrollToTop"
 import Home from "@/pages/Home"
 import Projects from "@/pages/Projects"
+import AreaPage from "@/pages/AreaPage"
 import ProjectDetail from "@/pages/ProjectDetail"
 import About from "@/pages/About"
 import Contact from "@/pages/Contact"
@@ -16,7 +17,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/projects/:area" element={<AreaPage />} />
+          <Route path="/projects/:area/:slug" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

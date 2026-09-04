@@ -32,6 +32,9 @@ export default function Footer() {
               key={social.label}
               href={social.href}
               className="hover:text-foreground"
+              {...(social.href.startsWith("http")
+                ? { target: "_blank", rel: "noreferrer" }
+                : {})}
             >
               {social.label}
             </a>

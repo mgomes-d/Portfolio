@@ -7,7 +7,7 @@ export default function NotFound() {
       <p className="mb-3 text-sm font-medium text-primary">404</p>
       <h1 className="text-4xl font-bold tracking-tight">Page not found</h1>
       <p className="mt-4 max-w-md text-muted-foreground">
-        That route does not exist. The rest of the site is still here.
+        This page does not exist.
       </p>
       <div className="mt-8">
         <Link to="/" className={buttonVariants()}>

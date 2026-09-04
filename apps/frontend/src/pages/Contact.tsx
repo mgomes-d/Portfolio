@@ -26,11 +26,11 @@ export default function Contact() {
       <div>
         <p className="mb-3 text-sm font-medium text-primary">Contact</p>
         <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-          Let&apos;s talk
+          Contact
         </h1>
         <p className="mt-4 max-w-md text-lg text-muted-foreground">
-          {site.availability} in {site.location}. Send a note and I&apos;ll get
-          back to you.
+          You may write by email or use the form. The form opens your email
+          client with the message prepared.
         </p>
 
         <ul className="mt-10 space-y-4 text-sm">

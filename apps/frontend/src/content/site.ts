@@ -1,24 +1,22 @@
 /**
- * Site-wide copy and links. Edit this file to update every page.
+ * Site-wide copy.
  */
 export const site = {
   name: "Murillo Gomes de Senna",
   shortName: "Murillo",
   initials: "MGS",
   role: "Backend Developer",
-  location: "Belgium",
-  availability: "Open to opportunities",
-  headline:
-    "I build robust backend systems with Python, FastAPI and AWS.",
+  location: "Brussels, Belgium",
+  headline: "Backend systems, APIs, and infrastructure.",
   intro:
-    "Currently open to opportunities in Belgium.",
-  email: "hello@murillosenna.dev",
+    "Python, Unix, networking, and AWS. I have written an HTTP server, a Unix shell, and a kernel from scratch, and configured networks from IPv4 routing to BGP.",
+  email: "mgomesd.pro@gmail.com",
   githubUrl: "",
   linkedinUrl: "",
   about: [
-    "I'm a backend developer focused on reliable APIs, clear interfaces, and systems that stay up when something goes wrong.",
-    "I trained at 42, where you build from a spec — no tutorials, just peers and a lot of debugging. That habit of shipping isolated, testable programs is still how I work.",
-    "I'm looking for a team in Belgium where I can own services end to end: design the API, persist the data, deploy it, and keep it healthy.",
+    "I am a backend developer in Brussels. I am interested in APIs that remain simple to consume, and in systems in which a failure stays contained rather than spreading.",
+    "I trained through a project-based engineering programme in Brussels and hold the AWS Solutions Architect – Associate and Cloud Practitioner certifications. I have applied for the two French professional titles that correspond to the programme — IT solutions designer and developer (level 6) and IT architecture expert (level 7) — and am waiting for the official award. I completed internships at Johnson & Johnson Innovative Medicine and at Corona Print.",
+    "The programme covered the whole stack: an HTTP server and a full web application, Docker and Kubernetes deployments, BGP overlays, a Unix shell and a kernel written in C, binary exploitation and web security audits, and machine-learning models implemented from the mathematics. The projects on this site are organised by those areas.",
   ],
 } as const
 

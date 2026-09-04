@@ -29,7 +29,7 @@ export class ProjectErrorBoundary extends Component<Props, State> {
             This project could not be loaded
           </h1>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            The demo failed in isolation. The rest of the site is unaffected.
+            The demonstration failed. The remainder of the site is unaffected.
           </p>
           <Link
             to="/projects"
