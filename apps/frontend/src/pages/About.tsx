@@ -11,7 +11,7 @@ export default function About() {
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-16">
       <p className="mb-3 text-sm font-medium text-primary">About</p>
       <h1 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-        Backend developer in Brussels.
+        Software engineer.
       </h1>
 
       <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
