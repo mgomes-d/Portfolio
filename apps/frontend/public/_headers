@@ -1,0 +1,10 @@
+# HTML always revalidates so a new deploy is visible after refresh.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Hashed Vite assets can be cached for a long time.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

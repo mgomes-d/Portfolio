@@ -7,9 +7,10 @@ export const site = {
   initials: "MGS",
   role: "Software Engineer",
   location: "Brussels, Belgium",
-  headline: "Backend systems, APIs, and infrastructure.",
+  headline:
+    "I focus on software from the API down to the machine: services, Unix, networks, and infrastructure.",
   intro:
-    "Python, Unix, networking, and AWS. I have written an HTTP server, a Unix shell, and a kernel from scratch, and configured networks from IPv4 routing to BGP.",
+    "I have written an HTTP server, a Unix shell, and a kernel from scratch, and configured networks from IPv4 routing to BGP.",
   email: "mgomesd.pro@gmail.com",
   githubUrl: "",
   linkedinUrl: "https://www.linkedin.com/in/mgomes-d/",

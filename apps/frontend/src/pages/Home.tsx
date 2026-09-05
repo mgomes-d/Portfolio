@@ -19,8 +19,8 @@ export default function Home() {
           <p className="mb-6 text-sm font-medium tracking-wide text-primary">
             {site.role} · {site.location}
           </p>
-          <h1 className="max-w-3xl text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            {site.name}
+          <h1 className="max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight sm:text-7xl lg:text-8xl">
+            {site.shortName}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
             {site.headline} {site.intro}
