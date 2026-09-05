@@ -1,2 +1,0 @@
-# Client routes (About, Contact, /projects/:area) must serve the SPA.
-/*    /index.html   200
