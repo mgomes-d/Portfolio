@@ -9,7 +9,7 @@ import { skillGroups } from "@/content/skills"
 export default function About() {
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-16">
-      <p className="mb-3 text-sm text-primary">About</p>
+      <p className="mb-3 font-serif text-base italic text-primary">About</p>
       <h1 className="max-w-3xl text-4xl md:text-5xl">
         Software engineer.
       </h1>

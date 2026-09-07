@@ -1,7 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="M">
-  <rect width="32" height="32" fill="#9a3b24"/>
-  <path
-    fill="#f3ece2"
-    d="M8 23V9h3.05l4.95 10.15L21 9h3v14h-2.7V12.55L16.85 22.4h-1.7L10.7 12.55V23H8z"
+  <circle cx="16" cy="16" r="16" fill="#0b1f3a"/>
+  <circle
+    cx="16"
+    cy="16"
+    r="14.2"
+    fill="none"
+    stroke="#f6f3ec"
+    stroke-width="0.6"
+    opacity="0.32"
   />
+  <text
+    x="16.15"
+    y="21.7"
+    text-anchor="middle"
+    font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+    font-style="italic"
+    font-size="17.5"
+    fill="#f6f3ec"
+  >M</text>
+  <rect x="11.5" y="24.2" width="9" height="1.15" fill="#c8102e"/>
 </svg>

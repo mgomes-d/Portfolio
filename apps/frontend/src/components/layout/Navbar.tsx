@@ -19,13 +19,13 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link
           to="/"
-          className="font-serif text-xl font-medium tracking-tight"
+          className="font-serif text-[1.35rem] font-medium italic tracking-tight"
           onClick={() => setOpen(false)}
         >
           {site.shortName}
         </Link>
 
-        <div className="flex items-center gap-2 md:gap-6">
+        <div className="flex items-center gap-2 md:gap-8">
           <nav className="hidden items-center gap-8 md:flex">
             {links.map((link) => (
               <NavLink
@@ -33,7 +33,7 @@ export default function Navbar() {
                 to={link.to}
                 className={({ isActive }) =>
                   cn(
-                    "text-sm transition-colors",
+                    "text-[0.7rem] tracking-[0.16em] uppercase transition-colors",
                     isActive
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground",

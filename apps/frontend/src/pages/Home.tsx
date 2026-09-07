@@ -14,15 +14,15 @@ export default function Home() {
   return (
     <main>
       <section>
-        <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
-          <p className="mb-5 text-sm text-muted-foreground">
+        <div className="mx-auto max-w-6xl px-4 py-24 md:py-32">
+          <p className="mb-6 font-serif text-base italic text-muted-foreground">
             {site.role} · {site.location}
           </p>
-          <h1 className="max-w-3xl text-5xl leading-[0.95] sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-3xl text-5xl leading-[0.92] italic sm:text-7xl lg:text-8xl">
             {site.shortName}
           </h1>
-          <div className="mt-8 max-w-2xl border-l-2 border-primary pl-5">
-            <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <div className="mt-10 max-w-2xl border-l-[3px] border-primary pl-6">
+            <p className="font-serif text-xl leading-relaxed text-foreground/80 sm:text-2xl">
               {site.headline} {site.intro}
             </p>
           </div>
@@ -40,7 +40,9 @@ export default function Home() {
 
           <div className="mt-14 grid gap-10 sm:grid-cols-2">
             <div>
-              <p className="mb-3 text-sm text-primary">Certifications</p>
+              <p className="mb-3 font-serif text-base italic text-primary">
+                Certifications
+              </p>
               <ul className="space-y-2">
                 {credentials.map((item) => (
                   <li key={item.id}>
@@ -57,7 +59,9 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <p className="mb-3 text-sm text-primary">Experience</p>
+              <p className="mb-3 font-serif text-base italic text-primary">
+                Experience
+              </p>
               <ul className="space-y-2">
                 {experience.map((item) => (
                   <li key={item.id}>
@@ -83,8 +87,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-20">
           <div className="mb-10 flex items-end justify-between gap-4">
             <div>
-              <p className="mb-3 text-sm text-primary">Projects</p>
-              <h2 className="text-3xl md:text-4xl">Areas of work</h2>
+              <p className="mb-3 font-serif text-base italic text-primary">
+                Projects
+              </p>
+              <h2 className="text-3xl italic md:text-4xl">Areas of work</h2>
               <p className="mt-3 max-w-2xl text-muted-foreground">
                 Completed work, grouped by domain. Open an area for the
                 projects and what they involved.
@@ -142,8 +148,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-20">
           <div className="mb-10 flex items-end justify-between gap-4">
             <div>
-              <p className="mb-3 text-sm text-primary">Skills</p>
-              <h2 className="text-3xl md:text-4xl">Technical skills</h2>
+              <p className="mb-3 font-serif text-base italic text-primary">
+                Skills
+              </p>
+              <h2 className="text-3xl italic md:text-4xl">Technical skills</h2>
             </div>
             <Link
               to="/about"

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="border-t border-border bg-card">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-serif text-lg font-medium tracking-tight">
+          <p className="font-serif text-xl font-medium italic tracking-tight">
             {site.name}
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
