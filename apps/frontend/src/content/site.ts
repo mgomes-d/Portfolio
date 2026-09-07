@@ -8,9 +8,9 @@ export const site = {
   role: "Software Engineer",
   location: "Brussels, Belgium",
   headline:
-    "I focus on software from the API down to the machine: services, Unix, networks, and infrastructure.",
+    "I build software: Python services, APIs, and generative AI tools that fit into systems already in use.",
   intro:
-    "I have written an HTTP server, a Unix shell, and a kernel from scratch, and configured networks from IPv4 routing to BGP.",
+    "I have done this in a pharmaceutical engineering team and in a live production environment.",
   email: "mgomesd.pro@gmail.com",
   githubUrl: "",
   linkedinUrl: "https://www.linkedin.com/in/mgomes-d/",
