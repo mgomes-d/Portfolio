@@ -24,8 +24,8 @@ export class ProjectErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <main className="mx-auto flex max-w-6xl flex-1 flex-col justify-center px-4 py-20">
-          <p className="mb-3 text-sm font-medium text-primary">Project</p>
-          <h1 className="text-3xl font-bold tracking-tight">
+          <p className="mb-3 text-sm text-primary">Project</p>
+          <h1 className="text-3xl">
             This project could not be loaded
           </h1>
           <p className="mt-4 max-w-xl text-muted-foreground">

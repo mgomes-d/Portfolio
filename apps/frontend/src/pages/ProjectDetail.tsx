@@ -40,28 +40,21 @@ function ProjectView({ slugOverride }: { slugOverride?: string }) {
         {area ? area.label : "All projects"}
       </Link>
 
-      <p className="mt-10 text-sm font-medium text-primary">
+      <p className="mt-10 text-sm text-primary">
         {project.areas
           .map((id) => getArea(id)?.label)
           .filter(Boolean)
           .join(" · ")}{" "}
         · {project.year}
       </p>
-      <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
+      <h1 className="mt-3 text-4xl md:text-5xl">
         {project.title}
       </h1>
       <p className="mt-4 text-lg text-muted-foreground">{project.summary}</p>
 
-      <div className="mt-6 flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-card px-2.5 py-1 text-xs text-muted-foreground"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+      <p className="mt-6 text-sm text-muted-foreground">
+        {project.tags.join(" · ")}
+      </p>
 
       <p className="mt-10 text-base leading-relaxed text-muted-foreground">
         {project.description}
@@ -69,10 +62,10 @@ function ProjectView({ slugOverride }: { slugOverride?: string }) {
 
       {project.stages && project.stages.length > 0 ? (
         <section className="mt-10">
-          <h2 className="text-sm font-medium tracking-widest text-primary uppercase">
+          <h2 className="text-sm text-primary">
             Stages
           </h2>
-          <ol className="mt-4 divide-y divide-border/60 rounded-xl border border-border/60 bg-card">
+          <ol className="mt-4 divide-y divide-border border-y border-border">
             {project.stages.map((stage, index) => (
               <li key={stage.title} className="flex gap-4 px-5 py-4">
                 <span className="w-6 shrink-0 text-xs text-muted-foreground tabular-nums">
@@ -116,8 +109,8 @@ function ProjectView({ slugOverride }: { slugOverride?: string }) {
       </div>
 
       {project.embedUrl ? (
-        <section className="mt-12 rounded-xl border border-dashed border-border bg-card p-6">
-          <h2 className="font-semibold tracking-tight">Demo</h2>
+        <section className="mt-12 border-t border-border pt-6">
+          <h2 className="text-xl">Demo</h2>
           <iframe
             title={`${project.title} demo`}
             src={project.embedUrl}

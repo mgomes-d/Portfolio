@@ -19,12 +19,12 @@ export default function AreaCard({ area, index, className }: AreaCardProps) {
     <Link
       to={`/projects/${area.id}`}
       className={cn(
-        "group flex flex-col rounded-xl border border-border/60 bg-card p-6 transition-colors hover:border-primary/40",
+        "group flex flex-col border-t border-border py-6 transition-colors hover:border-primary",
         className,
       )}
     >
       <div className="mb-6 flex items-start justify-between gap-4">
-        <p className="text-xs tracking-widest text-muted-foreground uppercase">
+        <p className="text-xs text-muted-foreground">
           {number ? `${number} · ` : ""}
           {list.length} {list.length === 1 ? "project" : "projects"}
         </p>
@@ -34,21 +34,14 @@ export default function AreaCard({ area, index, className }: AreaCardProps) {
         />
       </div>
 
-      <h3 className="text-xl font-bold tracking-tight">{area.label}</h3>
+      <h3 className="text-2xl">{area.label}</h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
         {area.short}
       </p>
 
-      <ul className="mt-6 flex flex-wrap items-center gap-2">
-        {list.map((project) => (
-          <li
-            key={project.slug}
-            className="rounded-full bg-background px-2.5 py-1 text-xs text-muted-foreground"
-          >
-            {project.title}
-          </li>
-        ))}
-      </ul>
+      <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+        {list.map((project) => project.title).join(" · ")}
+      </p>
     </Link>
   )
 }

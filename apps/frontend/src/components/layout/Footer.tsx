@@ -6,11 +6,11 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border/40 bg-card">
+    <footer className="border-t border-border bg-card">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-semibold tracking-tight">
-            {site.name}<span className="text-primary">.</span>
+          <p className="font-serif text-lg font-medium tracking-tight">
+            {site.name}
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
             {site.role} · {site.location}
@@ -41,7 +41,7 @@ export default function Footer() {
           ))}
         </nav>
       </div>
-      <div className="border-t border-border/40">
+      <div className="border-t border-border">
         <p className="mx-auto max-w-6xl px-4 py-4 text-xs text-muted-foreground">
           © {year} {site.name}
         </p>

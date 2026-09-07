@@ -32,11 +32,11 @@ export default function AreaPage() {
         All areas
       </Link>
 
-      <p className="mt-10 text-sm font-medium text-primary">
+      <p className="mt-10 text-sm text-primary">
         {String(position + 1).padStart(2, "0")} · {list.length}{" "}
         {list.length === 1 ? "project" : "projects"}
       </p>
-      <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
+      <h1 className="mt-3 text-4xl md:text-5xl">
         {area.label}
       </h1>
       <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
@@ -51,7 +51,7 @@ export default function AreaPage() {
           <a
             key={project.slug}
             href={`#${project.slug}`}
-            className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
           >
             {project.title}
           </a>
@@ -69,12 +69,12 @@ export default function AreaPage() {
       </div>
 
       <div className="mt-16 border-t border-border/60 pt-8">
-        <p className="text-xs tracking-widest text-muted-foreground uppercase">
+        <p className="text-sm text-primary">
           Next area
         </p>
         <Link
           to={`/projects/${next.id}`}
-          className="mt-2 inline-flex items-center gap-2 text-lg font-semibold tracking-tight hover:text-primary"
+          className="mt-2 inline-flex items-center gap-2 font-serif text-xl hover:text-primary"
         >
           {next.label}
           <ArrowRight size={18} />
@@ -97,7 +97,7 @@ function ProjectEntry({
   return (
     <article id={project.slug} className="scroll-mt-24">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h2 className="text-2xl font-bold tracking-tight">{project.title}</h2>
+        <h2 className="text-2xl">{project.title}</h2>
         <p className="text-sm text-muted-foreground">
           {project.year}
           {secondary ? (
@@ -115,23 +115,16 @@ function ProjectEntry({
       </div>
       <p className="mt-2 text-base text-muted-foreground">{project.summary}</p>
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-card px-2.5 py-1 text-xs text-muted-foreground"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+      <p className="mt-4 text-sm text-muted-foreground">
+        {project.tags.join(" · ")}
+      </p>
 
       <p className="mt-5 text-base leading-relaxed text-muted-foreground">
         {project.description}
       </p>
 
       {project.stages && project.stages.length > 0 ? (
-        <ol className="mt-5 divide-y divide-border/60 rounded-xl border border-border/60 bg-card">
+        <ol className="mt-5 divide-y divide-border border-y border-border">
           {project.stages.map((stage, index) => (
             <li key={stage.title} className="flex gap-4 px-5 py-4">
               <span className="w-6 shrink-0 text-xs text-muted-foreground tabular-nums">

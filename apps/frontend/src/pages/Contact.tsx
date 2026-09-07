@@ -4,8 +4,8 @@ import { site } from "@/content/site"
 export default function Contact() {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-16">
-      <p className="mb-3 text-sm font-medium text-primary">Contact</p>
-      <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Contact</h1>
+      <p className="mb-3 text-sm text-primary">Contact</p>
+      <h1 className="text-4xl md:text-5xl">Contact</h1>
       <p className="mt-4 max-w-md text-lg text-muted-foreground">
         Email or LinkedIn.
       </p>

@@ -13,19 +13,20 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,color-mix(in_srgb,var(--primary)_14%,transparent),transparent_50%)]" />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
-          <p className="mb-6 text-sm font-medium tracking-wide text-primary">
+      <section>
+        <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
+          <p className="mb-5 text-sm text-muted-foreground">
             {site.role} · {site.location}
           </p>
-          <h1 className="max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-3xl text-5xl leading-[0.95] sm:text-7xl lg:text-8xl">
             {site.shortName}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            {site.headline} {site.intro}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 max-w-2xl border-l-2 border-primary pl-5">
+            <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
+              {site.headline} {site.intro}
+            </p>
+          </div>
+          <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/projects" className={buttonVariants({ size: "lg" })}>
               View projects
             </Link>
@@ -37,58 +38,53 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-12">
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Certifications
-            </p>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {credentials.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    to="/about#certifications"
-                    className="inline-flex rounded-full border border-border/60 bg-card px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
-                  >
+          <div className="mt-14 grid gap-10 sm:grid-cols-2">
+            <div>
+              <p className="mb-3 text-sm text-primary">Certifications</p>
+              <ul className="space-y-2">
+                {credentials.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      to="/about#certifications"
+                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
                       {item.status
                         ? `${item.homeLabel} · pending`
                         : item.homeLabel}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-8">
-            <p className="text-xs tracking-widest text-muted-foreground uppercase">
-              Experience
-            </p>
-            <ul className="mt-3 space-y-2">
-              {experience.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    to="/about#experience"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {item.company}
-                    <span className="text-border"> · </span>
-                    {item.role}
-                    <span className="text-border"> · </span>
-                    {item.year}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="mb-3 text-sm text-primary">Experience</p>
+              <ul className="space-y-2">
+                {experience.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      to="/about#experience"
+                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {item.company}
+                      <span className="text-border"> · </span>
+                      {item.role}
+                      <span className="text-border"> · </span>
+                      {item.year}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-border/40">
+      <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-4 py-20">
           <div className="mb-10 flex items-end justify-between gap-4">
             <div>
-              <p className="mb-3 text-sm font-medium text-primary">Projects</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Areas of work
-              </h2>
+              <p className="mb-3 text-sm text-primary">Projects</p>
+              <h2 className="text-3xl md:text-4xl">Areas of work</h2>
               <p className="mt-3 max-w-2xl text-muted-foreground">
                 Completed work, grouped by domain. Open an area for the
                 projects and what they involved.
@@ -103,20 +99,20 @@ export default function Home() {
             </Link>
           </div>
 
-          <ol className="divide-y divide-border/60 rounded-xl border border-border/60 bg-card">
+          <ol className="divide-y divide-border border-y border-border">
             {areas.map((area, index) => {
               const count = getProjectsByArea(area.id).length
               return (
                 <li key={area.id}>
                   <Link
                     to={`/projects/${area.id}`}
-                    className="group flex flex-col gap-2 px-5 py-5 transition-colors hover:bg-background/60 sm:flex-row sm:items-baseline sm:gap-8"
+                    className="group flex flex-col gap-2 py-5 transition-colors hover:bg-card/70 sm:flex-row sm:items-baseline sm:gap-8"
                   >
-                    <span className="w-8 shrink-0 text-xs text-muted-foreground tabular-nums">
+                    <span className="w-8 shrink-0 font-serif text-sm text-primary tabular-nums">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="text-lg font-semibold tracking-tight group-hover:text-primary">
+                      <span className="font-serif text-xl tracking-tight group-hover:text-primary">
                         {area.label}
                       </span>
                       <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
@@ -142,14 +138,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-border/40 bg-card/40">
+      <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-4 py-20">
           <div className="mb-10 flex items-end justify-between gap-4">
             <div>
-              <p className="mb-3 text-sm font-medium text-primary">Skills</p>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Technical skills
-              </h2>
+              <p className="mb-3 text-sm text-primary">Skills</p>
+              <h2 className="text-3xl md:text-4xl">Technical skills</h2>
             </div>
             <Link
               to="/about"
@@ -159,26 +153,16 @@ export default function Home() {
               <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {skillGroups.map((group) => (
-              <div
-                key={group.title}
-                className="rounded-xl border border-border/60 bg-background p-5"
-              >
-                <h3 className="font-semibold">{group.title}</h3>
+              <div key={group.title}>
+                <h3 className="text-xl">{group.title}</h3>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                   {group.summary}
                 </p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-full bg-card px-2.5 py-1 text-xs text-muted-foreground"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {group.items.join(" · ")}
+                </p>
               </div>
             ))}
           </div>

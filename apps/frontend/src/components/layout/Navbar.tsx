@@ -15,14 +15,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
+    <header className="fixed top-0 right-0 left-0 z-50 border-b border-border bg-background">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link
           to="/"
-          className="text-lg font-bold tracking-tight"
+          className="font-serif text-xl font-medium tracking-tight"
           onClick={() => setOpen(false)}
         >
-          {site.shortName}<span className="text-primary">.</span>
+          {site.shortName}
         </Link>
 
         <div className="flex items-center gap-2 md:gap-6">
